@@ -5,9 +5,6 @@ const forecast = (lattitude, longitude, callback) => {
     const unit = 'f';
     const url = `http://api.weatherstack.com/current?access_key=${WS_API_KEY}&query=${lattitude},${longitude}&units=${unit}`;
 
-    if (address.length === 0) {
-        callback('Please Enter Location', undefined)
-    }
     request({ url, json: true }, (err, res) => {
         if (err) {
             callback('unable to find web service', undefined)

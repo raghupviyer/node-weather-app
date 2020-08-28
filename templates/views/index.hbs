@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/weather.png">
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>Weather App</title>
+</head>
+<body>
+    <div class="main-content">
+        {{>header}}
+        <p>Enter any location and get the weather report.</p>
+        <form>
+            <input type="text" placeholder="Location">
+            <button>Search</button>
+        </form>
+        <p class="load"></p>
+        <h5>Description</h5>
+        <p class="desc"></p>
+        <h5>Observation Time</h5>
+        <p class="obs"></p>
+        <h5>Temperature</h5>
+        <p class="temp"></p>
+        <h5>Precipitation</h5>
+        <p class="precip"></p>
+        <h5>Latitude</h5>
+        <p class="lat"></p>
+        <h5>Longitude</h5>
+        <p class="long"></p>
+        <h5>Wind Speed</h5>
+        <p class="wspeed"></p>
+        <h5>Wind Degree</h5>
+        <p class="wdeg"></p>
+        <h5>Wind Direction</h5>
+        <p class="wdir"></p>
+        <h5>Pressure</h5>
+        <p class="pres"></p>
+        <h5>Humidity</h5>
+        <p class="humid"></p>
+        <h5>Visibility</h5>
+        <p class="vis"></p>
+    </div>
+    {{>footer}}
+    <script src="/js/app.js"></script>
+</body>
+</html>
