@@ -5,6 +5,8 @@ const app = express()
 
 const port = process.env.PORT || 7000
 
+require('dotenv').config()
+
 const geocode = require('../utils/geocode')
 const forecast = require('../utils/forecast')
 
@@ -41,7 +43,7 @@ app.get('/weather', (req, res) => {
             error: "address required"
         })
     }
-    geocode(req.query.address, (error, {lattitude, longitude, location} = {}) => {
+    geocode(req.query.address, (error, { lattitude, longitude, location } = {}) => {
         if (error) {
             return res.send({
                 error
